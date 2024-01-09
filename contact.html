@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Contact</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='http//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<style>  
+	.error { color: red; }  
+</style>  
+<script>  
+	function validateForm() {  
+		var firstName = document.forms["myForm"]["first_name"].value;  
+		var lastName = document.forms["myForm"]["last_name"].value;  
+		var address = document.forms["myForm"]["address"].value;  
+		var email = document.forms["myForm"]["email"].value;  
+		var age = document.forms["myForm"]["age"].value;  
+		var message = document.forms["myForm"]["message"].value;  
+		var errorMessages = "";  
+
+		// 验证名字是否为空  
+		if (firstName === "" || lastName === "") {  
+			errorMessages += "Name cannot be empty<br>";  
+		}  
+
+		// 验证地址是否为空  
+		if (address === "") {  
+			errorMessages += "The address cannot be empty<br>";  
+		}  
+
+		// 验证电子邮件格式是否正确  
+		if (!isValidEmail(email)) {  
+			errorMessages += "Please enter a valid email address<br>";  
+		}  
+
+		// 验证年龄是否为数字且在18-120之间  
+		if (!isValidAge(age)) {  
+			errorMessages += "Please enter a valid age (between 18 and 120)<br>";  
+		}  
+
+		// 验证留言是否为空  
+		if (message === "") {  
+			errorMessages += "The message cannot be empty<br>";  
+		}  
+
+		if (errorMessages) { // 如果存在错误，显示错误消息  
+			document.getElementById("error").innerHTML = errorMessages;  
+			return false; // 阻止表单提交  
+		} else {  
+			return true; // 表单提交正常进行  
+		}  
+	}  
+
+	function isValidEmail(email) {  
+		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  
+		return re.test(String(email).toLowerCase());  
+	}  
+
+	function isValidAge(age) {  
+		var ageNumber = parseInt(age, 10); // 将年龄转换为数字  
+		return !isNaN(ageNumber) && ageNumber >= 18 && ageNumber <= 120; // 检查年龄是否在有效范围内  
+	}  
+</script>  
+</head>
+<body>
+   <div class="header">
+	  <div class="header-top">
+			<div class="wrap"> 
+				    <div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+					</div>
+					<ul class="follow_icon">
+						<li><a href="#"><img src="images/fb.png" alt=""></a></li>
+						<li><a href="#"><img src="images/rss.png" alt=""></a></li>
+						<li><a href="#"><img src="images/tw.png" alt=""></a></li>
+						<li><a href="#"><img src="images/g+.png" alt=""></a></li>
+					</ul>
+				    <div class="clear"></div> 
+				</div>
+		</div>
+		<div class="header-bottom">
+			  <div class="wrap"> 
+			      <div class="top-nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li> 
+							<div class="dropdown">  
+								<button class="dropbtn">course</button>  
+								<div class="dropdown-content">  
+								  <a href="course.html">Course</a>  
+								  <a href="course.html">PHYC601 Physics Course</a>  
+								  <a href="course.html">CHEC628 Chemistry Course</a>  
+								  <a href="course.html">PHEC453 Physical Education Course</a> 
+								  <a href="course.html">COMC516 Computer Course</a> 
+								  <a href="course.html">ENGC443 English Course</a> 
+								  <a href="course.html">ORIC639 Biology course</a>  
+								</div>  
+							  </div>
+							<!-- <li><a href="course.html">course</a></li>  -->
+							<li><a href="map.html">map</a></li> 
+							<li class="active"><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				    <div class="search_box">
+					     <form>
+					     	<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+					     </form>
+					</div>
+	    		<div class="clear"></div>	
+	   		 </div>
+  		</div>
+  	 </div>
+  	  <div class="wrap"> 
+	   	 <div class="about-top">
+			 <div class="project-top-patination">
+				<ul>
+					<li><a href="index.html">Mainpage</a></li>
+					<li><p>Contact</p></li>
+				</ul>
+			</div>
+		 </div>
+		 <div class="about-bottom">
+			<div class="contact">
+				<div class="col span_2_of_3">
+				  <div class="contact-form">
+				  	<h3>Contact Us</h3>
+					    <!-- <form method="post" action="contact-post.html">
+					    	<div>
+						    	<span><label>Name</label></span>
+						    	<span><input name="userName" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>E-Mail</label></span>
+						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						     	<span><label>Mobile</label></span>
+						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>Subject</label></span>
+						    	<span><textarea name="userMsg"> </textarea></span>
+						    </div>
+						   <div>
+						   		<span><input type="submit" value="Submit"></span>
+						  </div>
+					    </form> -->
+						<form name="myForm" onsubmit="return validateForm()">  
+							<label for="first_name">first_name：</label>  
+							<input type="text" id="first_name" name="first_name"><br><br>  
+							<label for="last_name">last_name：</label>  
+							<input type="text" id="last_name" name="last_name"><br><br>  
+							<label for="address">address：</label>  
+							<input type="text" id="address" name="address"><br><br>  
+							<label for="email">email：</label>  
+							<input type="text" id="email" name="email"><br><br>  
+							<label for="age">age：</label>  
+							<input type="number" id="age" name="age"><br><br>  
+							<label for="message">message：</label><br>  
+							<textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>  
+							<input type="submit" value="SUBMIT">  
+						</form>  
+						<div id="error" class="error"></div> <!-- 显示错误消息 --> 
+				  </div>
+  				</div>
+				<div class="col span_1_of_3">
+					<div class="contact_info">
+    	 				<h3>Find Us Here</h3>
+					    	  <div class="map">
+							   	    <iframe width="100%" height="175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://127.0.0.1:5500/map.html"></iframe><br><small><a href="http://127.0.0.1:5500/map.html" style="color:#666;text-align:left;font-size:12px">View Larger Map</a></small>
+							  </div>
+      				</div>
+      			<div class="company_address">
+					<h3>School Information :</h3>
+					<p>500 Lorem Ipsum Dolor Sit,</p>
+					   <p>22-56-2-9 Sit Amet, Lorem,</p>
+					   <p>Australia</p>
+			   <p>Phone:(00) 222 666 444</p>
+			   <p>Fax: (000) 000 00 00 0</p>
+			  <p>Email: <span>3318511273@qq.com</span></p>
+			   <p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+				   </div>
+				 </div>
+				  <div class="clear"></div>
+			  </div>
+		</div>
+  </div>
+  <div class="footer">
+	<div class="wrap">
+       <div class="footer-top">
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>Information</h3>
+					<ul>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Sitemap</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Terms and conditions</a></li>
+						<li><a href="#">Legal Notice</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>Categories</h3>
+					<ul>
+						<li><a href="#">New products</a></li>
+						<li><a href="#">top sellers</a></li>
+						<li><a href="#">Specials</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Comments</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>My Account</h3>
+					<ul>
+						<li><a href="#">Your Account</a></li>
+						<li><a href="#">Personal info</a></li>
+						<li><a href="#">Prices</a></li>
+						<li><a href="#">Address</a></li>
+						<li><a href="#">Locations</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_footer-lastgrid">
+					<h3>Contact Us</h3>
+					<div class="footer-grid-address">
+						<p>Tel.800-255-9999</p>
+						<p>Fax: 1234 568</p>
+						<p>Email:<a class="email-link" href="#">email(at)purity.com</a></p>
+					</div>
+			   </div>
+				<div class="clear"></div> 
+		</div>
+		<div class="copy">
+			<p>&copy; Ningbo University of Science Queensland &copy; (Brian)2024/1/10</p>
+		</div>
+	 </div>
+   </div>
+<div style="display:none"><script src='http//v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
+
+    	
+    	
+            
