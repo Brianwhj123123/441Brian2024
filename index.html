@@ -1,63 +1,63 @@
 <!DOCTYPE HTML>
-<html格式 &#62;
-<头 &#62;
-<标题 &#62;主页</标题 &#62;
-<链接 href公司=“css/style.css” 反渗透=“样式表”类型=“文本/css”媒体=“全部” /&#62;
-<元名称=“视口”内容="width=device-width, initial-scale=1, maximum-scale=1" &#62;
-<元 http-equiv公司=“内容类型”内容="text/html; charset=utf-8" /&#62;
-<链接 href公司='http//fonts.googleapis.com/css?family=Roboto' 反渗透=&#39;样式表&#39;类型=&#39;文本/css&#39; &#62;
-<链接 href公司='http//fonts.googleapis.com/css?family=Pacifico' 反渗透=&#39;样式表&#39;类型=&#39;文本/css&#39; &#62;
+<html>
+<head>
+<title>Home</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='http//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <!--slider-->
-<链接 反渗透=“样式表” href公司= “css/flexslider.css”类型=“文本/css”媒体=“全部” /&#62;
-<脚本src公司= “js/modernizer.js” &#62;</脚本 &#62;
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+<script src="js/modernizr.js"></script>
 <!-- jQuery -->
-<脚本src公司=“js/jquery.min.js” &#62;</脚本 &#62;
-<脚本 &#62;窗口jQuery（jQuery）||文档写 ('<script src="js/libs/jquery-1.7.min.js">\x3C像素/脚本&#62;&#39; )</脚本 &#62;
-<!-- FlexSlider -->
-<脚本推迟src公司= &#39;js/jquery.flexslider.js&#39; &#62;</脚本 &#62;
-<脚本类型=“文本/javascript” &#62;
- $ (功能 ( ) {
- 语法突出显示全部的 ( ) ;
- } ) ;
- $ (窗口 ) .负载 (功能 ( ) {
- $ ( “柔性滑块” ) . 柔性滑块 ( {
-动画 :“幻灯片” ,
-开始 :功能 (滑块 ) {
- $ (“主体” ) .删除类 (&#39;加载&#39; ) ;
- }
- } ) ;
- } ) ;
-</脚本 &#62;
-<风格 &#62;
-居中粗体文本 {
-字体大小 : twenty二甲苯 ; /*Set font size*/
-字体加粗 :大胆的 ; /*Bold font*/
-水平对齐 :中心 ; /*Centered Text*/
- }
-</风格 &#62;
-
-</头 &#62;
-<身体 &#62;
-<div公司班=“页眉” &#62;
-<div公司班=“页眉顶部” &#62;
-<div公司班=“包裹” &#62;
-<div公司班=“徽标” &#62;
-<一 href公司=“index.html” &#62;< 国际货币基金组织src公司=“images/logo.png”中高音= &#34;&#34; /&#62;</一 &#62;
-<第页风格= &#34;水平对齐 :中心 ; &#34;班=“居中折叠文本” &#62;宁波理工大学昆士兰分校</第页 &#62;
-</div公司 &#62;
-<ul公司班=“follow_icon” &#62;
-<锂 &#62;<一 href公司= &#34;#&#34; &#62;< 国际货币基金组织src公司=“图像/fb.png”中高音= &#34;&#34; &#62;</一 &#62;</锂 &#62;
-<锂 &#62;<一 href公司= &#34;#&#34; &#62;< 国际货币基金组织src公司=“images/rss.png”中高音= &#34;&#34; &#62;</一 &#62;</锂 &#62;
-<锂 &#62;<一 href公司= &#34;#&#34; &#62;< 国际货币基金组织src公司=“images/tw.png”中高音= &#34;&#34; &#62;</一 &#62;</锂 &#62;
-<锂 &#62;<一 href公司= &#34;#&#34; &#62;< 国际货币基金组织src公司=“图像/g.png”中高音= &#34;&#34; &#62;</一 &#62;</锂 &#62;
-</ul公司 &#62;
-<div公司班=“清除” &#62;</div公司 &#62;
-</div公司 &#62;
-</div公司 &#62;
-<div公司班=“头部-底部” &#62;
-<div公司班=“包裹” &#62;
-<div公司班= “top-no” &#62;
-<ul公司 &#62;
+ <script src="js/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+  <!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+  <style>  
+    .centered-bold-text {  
+      font-size: 20px;  /* 设置字体大小 */  
+      font-weight: bold; /* 加粗字体 */  
+      text-align: center; /* 居中文本 */  
+    }  
+  </style>  
+  
+</head>
+<body>
+   <div class="header">
+	  <div class="header-top">
+			<div class="wrap"> 
+				    <div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+						<p style="text-align:center;" class="centered-bold-text">Ningbo University of Science Queensland</p> 
+					</div>
+					<ul class="follow_icon">
+						<li><a href="#"><img src="images/fb.png" alt=""></a></li>
+						<li><a href="#"><img src="images/rss.png" alt=""></a></li>
+						<li><a href="#"><img src="images/tw.png" alt=""></a></li>
+						<li><a href="#"><img src="images/g+.png" alt=""></a></li>
+					</ul>
+				    <div class="clear"></div> 
+				</div>
+		</div>
+		<div class="header-bottom">
+			  <div class="wrap"> 
+			      <div class="top-nav">
+						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
 							<li><a href="about.html">About</a></li> 
 							<div class="dropdown">  
